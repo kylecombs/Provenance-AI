@@ -41,6 +41,7 @@ MODEL_CONFIG = {
 
 # Database configuration
 DATABASE_CONFIG = {
+    "url": os.getenv("DATABASE_URL", "sqlite:///artwork_db.sqlite"),
     "host": os.getenv("DB_HOST", "localhost"),
     "port": int(os.getenv("DB_PORT", "5432")),
     "database": os.getenv("DB_NAME", "artwork_db"),
